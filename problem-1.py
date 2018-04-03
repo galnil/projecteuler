@@ -8,15 +8,13 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 """
 answer --> 233168
 """
-
-def ceildiv(a, b):
-	return -(-a // b)
+from math import ceil
 
 def f(multiples=[], bound=0):
 	
 	target = set()
 	for m in multiples:
-		for n in range(ceildiv(bound, m)):
+		for n in range(ceil(bound, m)):
 			target.add(n*m)
 
 

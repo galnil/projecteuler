@@ -4,7 +4,7 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
-def palindromic(num):
+def is_palindromic(num):
 	if str(num) == str(num)[::-1]:
 		return True
 	else:
@@ -16,7 +16,7 @@ def main():
 	for i in range(100, 1000):
 		for ii in range(100, 1000):
 			print('i: {0}, ii: {1}, ixii: {2}'.format(i,ii,i*ii))
-			if palindromic(i*ii) == True:
+			if is_palindromic(i*ii) == True:
 				palindromic_list.append(i*ii)
 			else:
 				continue
